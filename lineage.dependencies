@@ -1,0 +1,8 @@
+[
+  {
+    "remote": "github",
+    "repository": "JonnyXDA/android_vendor_ulefone_metal",
+    "target_path": "vendor/ulefone/metal",
+    "branch": "LineageOS-14.1"
+  }
+] 
