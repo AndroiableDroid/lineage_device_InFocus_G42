@@ -196,7 +196,7 @@ allow system_server dex2oat_exec:file r_file_perms;
 # Date: WK14.47
 # Operation : CTS
 # Purpose : for executing recovery.dex
-#allow system_server system_data_file:file execute;
+allow system_server system_data_file:file execute;
 
 # Date: WK14.47
 # Operation : MTBF
@@ -270,9 +270,3 @@ allow system_server mtk_mwblacklist_service:service_manager find;
 binder_call(system_server,etsd)
 allow system_server etsd_service:service_manager find;
 allow fingerprintd etsd_service:service_manager find;
-
-# Nougat
-allow system_server debugfs:dir { read open };
-allow system_server unlabeled:file unlink;
-allow system_server wmt_prop:file { read open getattr };
-allow system_server wifi_data_file:sock_file { unlink };

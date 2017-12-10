@@ -1,8 +1,0 @@
-[
-  {
-    "remote": "github",
-    "repository": "AndroiableDroid/lineage_vendor_InFocus_G42",
-    "target_path": "vendor/InFocus/G42",
-    "branch": "LineageOS-14.1"
-  }
-] 

@@ -1,8 +1,4 @@
 # Charger
 PRODUCT_PACKAGES += \
-    charger
-
-# Power
-PRODUCT_PACKAGES += \
-    power.default \
-    power.mt6755
+    charger \
+    charger_res_images

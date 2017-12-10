@@ -18,16 +18,13 @@
 LOCAL_PATH := device/InFocus/G42
 
 # Device board elements
+include $(LOCAL_PATH)/PlatformConfig.mk
 include $(LOCAL_PATH)/board/*.mk
 
 # Device vendor board
 -include vendor/InFocus/G42/BoardConfigVendor.mk
 
 #######################################################################
-
-# Kernel
-TARGET_KMODULES := true
-BOARD_GLOBAL_CFLAGS += -DDISABLE_HW_ID_MATCH_CHECK
 
 # Disable memcpy opt (for audio libraries)
 TARGET_CPU_MEMCPY_OPT_DISABLE := true
@@ -37,14 +34,18 @@ BOARD_EGL_CFG := $(LOCAL_PATH)/configs/egl.cfg
 USE_OPENGL_RENDERER := true
 BOARD_EGL_WORKAROUND_BUG_10194508 := true
 
-# Flags
-BOARD_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
-
 # Fonts
 EXTENDED_FONT_FOOTPRINT := true
 
-# System.prop
+# init
+TARGET_PROVIDES_INIT_RC := true
+
+# system.prop
 TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system.prop
+
+# Vold
+TARGET_USE_CUSTOM_LUN_FILE_PATH := sys/class/android_usb/android0/f_mass_storage/lun/file
+
 
 #FIX
 $(shell mkdir -p $(OUT)/obj/KERNEL_OBJ/usr)

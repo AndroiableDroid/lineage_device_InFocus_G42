@@ -1,10 +1,4 @@
-# Keyboard layout
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/mtk-kpd.kl:system/usr/keylayout/mtk-kpd.kl \
-    $(LOCAL_PATH)/configs/ACCDET.kl:system/usr/keylayout/ACCDET.kl \
-    $(LOCAL_PATH)/configs/AVRCP.kl:system/usr/keylayout/AVRCP.kl
-	 
-# Keyhandler package
+# Keyhandler
 PRODUCT_PACKAGES += \
     com.cyanogenmod.keyhandler
 
