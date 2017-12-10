@@ -14,8 +14,8 @@
 # limitations under the License.
 #
 
-# Inherit some common cm stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+# Inherit some common dot stuff.
+$(call inherit-product, vendor/dot/config/common_full_phone.mk)
 
 # Inherit device configuration
 $(call inherit-product, $(LOCAL_PATH)/device_G42.mk)
@@ -29,6 +29,6 @@ PRODUCT_BRAND := InFocus
 PRODUCT_DEVICE := G42
 PRODUCT_MANUFACTURER := InFocus
 PRODUCT_MODEL := InFocus M680
-PRODUCT_NAME := lineage_G42
+PRODUCT_NAME := dot_G42
 PRODUCT_RELEASE_NAME := G42
 PRODUCT_RESTRICT_VENDOR_FILES := false
