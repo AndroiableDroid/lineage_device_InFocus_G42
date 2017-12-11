@@ -241,9 +241,6 @@ allow mediaserver uhid_device:chr_file { read write ioctl open };
 # Operation : Migration
 # Purpose : Camera EEPROM Calibration
 allow mediaserver CAM_CAL_DRV_device:chr_file { read write ioctl open };
-allow mediaserver CAM_CAL_DRV_S5K3M2_device:chr_file { read write ioctl open };
-allow mediaserver CAM_CAL_DRV_S5K3L2_device:chr_file { read write ioctl open };
-allow mediaserver CAM_CAL_DRV_S5K4H8_device:chr_file { read write ioctl open };
 
 # Date : WK14.43
 # Operation : Migration
