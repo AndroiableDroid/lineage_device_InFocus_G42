@@ -85,6 +85,11 @@
 /dev/SUBAF(/.*)? u:object_r:SUBAF_device:s0
 /dev/cache(/.*)? u:object_r:cache_device:s0
 /dev/CAM_CAL_DRV(/.*)? u:object_r:CAM_CAL_DRV_device:s0
+/dev/CAM_CAL_DRV_S5K3M2(/.*)? u:object_r:CAM_CAL_DRV_S5K3M2_device:s0
+/dev/CAM_CAL_DRV_S5K3L2(/.*)? u:object_r:CAM_CAL_DRV_S5K3L2_device:s0
+#add for G3T by wanglei start
+/dev/CAM_CAL_DRV_S5K4H8(/.*)? u:object_r:CAM_CAL_DRV_S5K4H8_device:s0
+#add for G3T by wanglei end
 /dev/camera-fdvt(/.*)? u:object_r:camera_fdvt_device:s0
 /dev/camera-isp(/.*)? u:object_r:camera_isp_device:s0
 /dev/camera-pipemgr(/.*)? u:object_r:camera_pipemgr_device:s0
