@@ -1,7 +1,7 @@
-# InFocus M680 LineageOS 14.1 / AOSP 7.1.1
+# InFocus M680 DotOS-N
 ==============
 
-This branch is device for building of the LineageOS 14.1 and Android Nougat 7.1.1 AOSP ROMs. For more information about building the ROM, read our [build manual](manual).
+This branch is device for building of the DotOS-N ROM. For more information about building the ROM, read our [build manual](manual).
 
 ---
 
