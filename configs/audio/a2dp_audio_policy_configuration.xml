@@ -44,5 +44,4 @@
                sources="a2dp output"/>
         <route type="mix" sink="a2dp input"
                sources="BT A2DP In"/>
-    </routes>
-</module>
+</routes>

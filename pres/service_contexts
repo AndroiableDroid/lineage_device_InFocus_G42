@@ -147,7 +147,7 @@ wifiscanner                               u:object_r:wifiscanner_service:s0
 wifi                                      u:object_r:wifi_service:s0
 window                                    u:object_r:window_service:s0
 *                                         u:object_r:default_android_service:s0
-#line 1 "/home/vladimirs77/RR/out/target/product/metal/obj/ETC/sectxfile_nl_intermediates/sectxfile_nl"
+#line 1 "/home/vladimirs77/RR/out/target/product/G42/obj/ETC/sectxfile_nl_intermediates/sectxfile_nl"
 
 #line 1 "vendor/cm/sepolicy/service_contexts"
 edgegestureservice                        u:object_r:edge_gesture_service:s0
@@ -167,5 +167,5 @@ cmlivelockscreen                          u:object_r:cm_livelockscreen_service:s
 cmweather                                 u:object_r:cm_weather_service:s0
 cmlivedisplay                             u:object_r:cm_livedisplay_service:s0               
 cmaudio                                   u:object_r:cm_audio_service:s0
-#line 1 "/home/vladimirs77/RR/out/target/product/metal/obj/ETC/sectxfile_nl_intermediates/sectxfile_nl"
+#line 1 "/home/vladimirs77/RR/out/target/product/G42/obj/ETC/sectxfile_nl_intermediates/sectxfile_nl"
 
