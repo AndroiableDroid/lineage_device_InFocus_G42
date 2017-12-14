@@ -8,7 +8,7 @@ for dir in $dirs ; do
 	cd $rootdirectory
 	cd $dir
 	echo "Applying $dir patches..."
-	git apply $rootdirectory/device/InFocus/G42/patches/$dir/*.patch
+	git apply --reject --whitespace=fix $rootdirectory/device/InFocus/G42/patches/$dir/*.patch
 	echo " "
 done
 
