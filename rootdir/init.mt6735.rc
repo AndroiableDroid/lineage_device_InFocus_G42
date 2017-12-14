@@ -147,6 +147,13 @@ on post-fs-data
     chmod 0660 /dev/gyroscope
     chmod 0660 /dev/aal_als
 
+    chmod 0660 /sys/devices/platform/msensor/driver/cpsopmode
+    chmod 0660 /sys/devices/platform/msensor/driver/cpsreptxy
+    chmod 0660 /sys/devices/platform/msensor/driver/cpsreptz
+    chmod 0660 /sys/devices/platform/gsensor/driver/cpsopmode
+    chmod 0660 /sys/devices/platform/gsensor/driver/cpsrange
+    chmod 0660 /sys/devices/platform/gsensor/driver/cpsbandwidth
+
     chown system system /dev/hwmsensor
     chown system system /dev/msensor
     chown system system /dev/gsensor
@@ -190,7 +197,7 @@ on post-fs-data
     chown system system /sys/class/misc/m_batch_misc/batchbatch
     chown system system /sys/class/misc/m_batch_misc/batchflush
 
-    chmod 0660 /sys/class/misc/m_gyro_misc/gyroenablenodata
+	chmod 0660 /sys/class/misc/m_gyro_misc/gyroenablenodata
     chmod 0660 /sys/class/misc/m_gyro_misc/gyroactive
     chmod 0660 /sys/class/misc/m_gyro_misc/gyrodelay
     chmod 0660 /sys/class/misc/m_gyro_misc/gyrobatch
@@ -228,6 +235,46 @@ on post-fs-data
     chown system system /sys/class/misc/m_baro_misc/barodelay
     chown system system /sys/class/misc/m_baro_misc/barobatch
     chown system system /sys/class/misc/m_baro_misc/baroflush
+	
+
+    #add for acc
+    chmod 0660 /sys/bus/platform/drivers/gsensor/cpsdata
+    chmod 0660 /sys/bus/platform/drivers/gsensor/cpsopmode
+    chmod 0660 /sys/bus/platform/drivers/gsensor/cpsrange
+    chmod 0660 /sys/bus/platform/drivers/gsensor/cpsbandwidth
+
+    #add for mag
+    chmod 0660 /sys/bus/platform/drivers/msensor/cpsdata
+    chmod 0660 /sys/bus/platform/drivers/msensor/cpsopmode
+    chmod 0660 /sys/bus/platform/drivers/msensor/cpsreptxy
+    chmod 0660 /sys/bus/platform/drivers/msensor/cpsreptz
+    chmod 0660 /sys/bus/platform/drivers/msensor/sensordata
+    chmod 0660 /sys/bus/platform/drivers/msensor/posturedata
+
+    #add for gyro
+    chmod 0660 /sys/bus/platform/drivers/gyroscope/rawdata
+    chmod 0660 /sys/bus/platform/drivers/gyroscope/datarate
+    chmod 0660 /sys/bus/platform/drivers/gyroscope/range
+    chmod 0660 /sys/bus/platform/drivers/gyroscope/powermode
+
+    chown system system /sys/bus/platform/drivers/gsensor/cpsdata
+    chown system system /sys/bus/platform/drivers/gsensor/cpsrange
+    chown system system /sys/bus/platform/drivers/gsensor/cpsbandwidth
+    chown system system /sys/bus/platform/drivers/gsensor/cpsopmode
+
+    chown system system /sys/bus/platform/drivers/msensor/cpsdata
+    chown system system /sys/bus/platform/drivers/msensor/cpsopmode
+    chown system system /sys/bus/platform/drivers/msensor/cpsreptxy
+    chown system system /sys/bus/platform/drivers/msensor/cpsreptz
+    chown system system /sys/bus/platform/drivers/msensor/sensordata
+    chown system system /sys/bus/platform/drivers/msensor/posturedata
+
+    chown system system /sys/bus/platform/drivers/gyroscope/rawdata
+    chown system system /sys/bus/platform/drivers/gyroscope/datarate
+    chown system system /sys/bus/platform/drivers/gyroscope/range
+    chown system system /sys/bus/platform/drivers/gyroscope/powermode
+    #Accdet
+    chown root radio /sys/devices/platform/Accdet_Driver/driver/accdet_call_state
 
     # msensor
     chmod 0444 /sys/bus/platform/drivers/msensor/daemon
@@ -251,6 +298,9 @@ on post-fs-data
     mkdir /data/misc/s62x 0771 compass compass
     mkdir /data/data/mcube 0664 system system
 
+    #EM eint
+    chown root diag /sys/bus/platform/drivers/eint/current_eint
+
     # Display
     chmod 0660 /dev/graphics/fb0
     chown system graphics /dev/graphics/fb0
@@ -258,14 +308,15 @@ on post-fs-data
     chmod 0660 /dev/mtk_disp_mgr
     chown system graphics /dev/mtk_disp_mgr
 
-    chmod 0660 /sys/devices/platform/mtk_disp_mgr.0/rgb
-    chown system system /sys/devices/platform/mtk_disp_mgr.0/rgb
-
     chmod 0660 /dev/mtkfb_vsync
     chown system graphics /dev/mtkfb_vsync
 
     chmod 0660 /dev/sw_sync
     chown system graphics /dev/sw_sync
+
+    # EM baseband file
+    chown root diag /system/bin/baseband_regdump
+    chmod 4750 /system/bin/baseband_regdump
 
     # pmu
     chown root radio /sys/devices/platform/mt-pmic/pmic_access_bank0
@@ -307,22 +358,26 @@ on post-fs-data
     chown system media /dev/uibc
     chmod 0660 /dev/uibc
 
-    # Camera
+    #Camera
+    chmod 0660 /dev/camera-sysram
     chmod 0660 /dev/camera-isp
     chmod 0660 /dev/camera-fdvt
+    chmod 0660 /dev/camera-pipemgr
     chmod 0660 /dev/kd_camera_hw
     chmod 0660 /dev/kd_camera_flashlight
     chmod 0660 /dev/kd_camera_hw_bus2
+    chmod 0660 /dev/FM50AF
     chmod 0660 /dev/CAM_CAL_DRV
-    chmod 0660 /dev/MAINAF
 
+    chown system camera /dev/camera-sysram
     chown system camera /dev/camera-isp
     chown system camera /dev/camera-fdvt
+    chown system camera /dev/camera-pipemgr
     chown system camera /dev/kd_camera_hw
     chown system camera /dev/kd_camera_flashlight
     chown system camera /dev/kd_camera_hw_bus2
+    chown system camera /dev/FM50AF
     chown system camera /dev/CAM_CAL_DRV
-    chown system camera /dev/MAINAF
 
     # SMI
     chmod 0660 /dev/MTK_SMI
@@ -384,10 +439,6 @@ on post-fs-data
 
     chmod 0660 /dev/ttyC2
     chown system gps /dev/ttyC2
-
-	# Fingerprint
-	chmod 0666 /dev/esfp0
-    chown system system /dev/esfp0
 
     # IO Scheduler
     chown system system /sys/block/mmcblk0/queue/scheduler
@@ -567,8 +618,7 @@ service agpsd /system/bin/mtk_agpsd
     socket agpsd2 stream 660 gps inet
     socket agpsd3 stream 660 gps inet
     user gps
-    group gps radio inet sdcard_r sdcard_rw misc
-    setenv LD_SHIM_LIBS "/system/bin/mtk_agpsd|libshim_agps.so"
+    group gps radio inet sdcard_r sdcard_rw misc"
 
 service wifi2agps /system/bin/wifi2agps
     class main
@@ -582,21 +632,103 @@ service mnld /system/xbin/mnld
     socket mnld stream 660 gps system
 
 #
-# sensor service (begin)
+#sensor service (begin)
 #
 
 service msensord /system/bin/msensord
     class main
     oneshot
 
-service mxg2320d /system/bin/mxg2320d
+service s62xd /system/bin/s62xd
+    disabled
+    user compass
+    group system
+    class main
+service ami304d /system/bin/ami304d
+    user system
+    group system
+    disabled
+    class main
+
+service memsicd /system/bin/memsicd
+     disabled
+    user system
+    group system
+    class main
+
+service memsicd3416x /system/bin/memsicd3416x
+     disabled
+	 user system
+    group system
+    class main
+service akmd8975 /system/bin/akmd8975
     disabled
     user system
     group system
     class main
 
+service akmd8963 /system/bin/akmd8963
+    disabled
+    user system
+    group system
+    class main
+
+service akmd09911 /system/bin/akmd09911
+    disabled
+    user system
+    group system
+    class main
+service bmm050d /system/bin/bmm050d
+    disabled
+    user system
+    group system
+    class main
+
+service bmm056d /system/bin/bmm056d
+    disabled
+    user system
+    group system
+    class main
+service mc6420d /system/bin/mc6420d
+    disabled
+    user system
+    group system
+    class main
+service qmc5983d /system/bin/qmc5983d
+     disabled
+	 user system
+    group system
+    class main
+
+service orientationd /system/bin/orientationd
+    disabled
+    user system
+    group system input
+    class main
+service AcdApiDaemon /system/bin/AcdApiDaemon
+    disabled
+    user system
+    group system
+    class main
+
+service geomagneticd /system/bin/geomagneticd
+    disabled
+    user system
+    group system input
+    class main
+
+service mpud6050 /system/bin/mpud6050
+    oneshot
+    user system
+    group system
+
+service mc64xxd /system/bin/mc64xxd
+    disabled
+    user system
+    group system
+    class main
 #
-# sensor service (end)
+#sensor service (end)
 #
 
 #
@@ -637,12 +769,3 @@ service conn_launcher /system/bin/6620_launcher -p /system/etc/firmware/
 # Charger
 service kpoc_charger /system/bin/kpoc_charger
     class charger
-
-# Fingerprint
-service etsd /system/bin/etsd
-    class late_start
-    user root
-
-service fingerprintd /system/bin/fingerprintd
-    class late_start
-    user root
