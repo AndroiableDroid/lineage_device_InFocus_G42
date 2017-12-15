@@ -9,11 +9,7 @@ git show HEAD > 0001_.patch
 How to launch the LineageOS 14.1 build:
 
 Download vendor and device from my GitHub.
-<<<<<<< HEAD
-Create dirs coolpad/CP8676_I02 and place them in working_dir/device and in working_dir/vendor
-=======
 Create dirs InFocus/G42 and place them in working_dir/device and in working_dir/vendor
->>>>>>> new/master
 After copy files from downloaded device in working_dir/device , and from downloaded vendor in working_dir/vendor
 Open terminal and write:
 
@@ -21,18 +17,10 @@ cd working_dir
 
 export JACK_SERVER_VM_ARGUMENTS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx4g"
 
-<<<<<<< HEAD
-./device/coolpad/CP8676_I02/patches/install.sh
-
-. build/envsetup.sh
-
-lunch lineage_CP8676_I02-userdebug && make bacon -j8
-=======
 ./device/InFocus/G42/patches/install.sh
 
 . build/envsetup.sh
 
 lunch lineage_G42-userdebug && make bacon -j10
->>>>>>> new/master
 
 Wait for the build to finish, for me ~5hr

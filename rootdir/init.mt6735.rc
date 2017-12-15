@@ -3,10 +3,7 @@ import init.modem.rc
 
 on init
     export LD_PRELOAD "libmtk_symbols.so"
-<<<<<<< HEAD
-=======
     #export LD_SHIM_LIBS "/system/lib/libshowlogo.so|libshim_asc.so:/system/lib/libmtk_mmutils.so|libshim_asc.so:/system/lib/libui.so|libshim_ui.so:/system/lib64/libui.so|libshim_ui.so:/system/lib/hw/hwcomposer.mt6753.so|libshim_cam.so:/system/lib64/hw/hwcomposer.mt6753.so|libshim_cam.so:/system/lib/libcam.client.so|libshim_cam.so:/system/lib64/libcam.client.so|libshim_cam.so:/system/lib/libMtkOmxVdec.so|libshim_cam.so:/system/lib64/libMtkOmxVdec.so|libshim_cam.so:/system/lib/liblog.so|liblog_mtk.so:/system/lib64/liblog.so|liblog_mtk.so:/system/lib/libmedia.so|libshim_audio.so:/system/lib64/libmedia.so|libshim_audio.so:/system/lib/libmedia.so|libshim_audioCompat.so:/system/lib64/libmedia.so|libshim_audioCompat.so:/system/lib/libcam.camnode.so|libshim_gui.so:/system/lib64/libcam.camnode.so|libshim_gui.so:/system/lib/libcam.client.so|libshim_gui.so:/system/lib64/libcam.client.so|libshim_gui.so:/system/lib/libcam_utils.so|libshim_gui.so:/system/lib64/libcam_utils.so|libshim_gui.so:/system/lib/libmtk_mmutils.so|libshim_gui.so:/system/lib64/libmtk_mmutils.so|libshim_gui.so:/system/lib/libMtkOmxVenc.so|libshim_gui.so:/system/lib64/libMtkOmxVenc.so|libshim_gui.so:/system/lib64/librilmtk.so|libshim_parcel.so:/system/lib64/librilmtkmd2.so|libshim_parcel.so:/system/lib/libshowlogo.so|libshim_fence.so:/system/lib/libMtkOmxVdecEx.so|libshim_fence.so"
->>>>>>> new/master
 
     # mount points
     mkdir /protect_f 0771 system system
@@ -60,11 +57,7 @@ on post-fs
 
     mknod /dev/stpwmt c 190 0
     mknod /dev/stpgps c 191 0
-<<<<<<< HEAD
-    mknod /dev/stpbt c 192 0
-=======
     mknod /dev/stpbt  c 192 0
->>>>>>> new/master
 
     # BT
     chmod 0660 /dev/stpbt
@@ -197,11 +190,7 @@ on post-fs-data
     chown system system /sys/class/misc/m_batch_misc/batchbatch
     chown system system /sys/class/misc/m_batch_misc/batchflush
 
-<<<<<<< HEAD
-	chmod 0660 /sys/class/misc/m_gyro_misc/gyroenablenodata
-=======
     chmod 0660 /sys/class/misc/m_gyro_misc/gyroenablenodata
->>>>>>> new/master
     chmod 0660 /sys/class/misc/m_gyro_misc/gyroactive
     chmod 0660 /sys/class/misc/m_gyro_misc/gyrodelay
     chmod 0660 /sys/class/misc/m_gyro_misc/gyrobatch
@@ -319,23 +308,6 @@ on post-fs-data
     chmod 0660 /dev/uibc
 
     # Camera
-<<<<<<< HEAD
-    chmod 0660 /dev/camera-isp
-    chmod 0660 /dev/camera-fdvt
-    chmod 0660 /dev/kd_camera_hw
-    chmod 0660 /dev/kd_camera_flashlight
-    chmod 0660 /dev/kd_camera_hw_bus2
-    chmod 0660 /dev/CAM_CAL_DRV
-    chmod 0660 /dev/MAINAF
-
-    chown system camera /dev/camera-isp
-    chown system camera /dev/camera-fdvt
-    chown system camera /dev/kd_camera_hw
-    chown system camera /dev/kd_camera_flashlight
-    chown system camera /dev/kd_camera_hw_bus2
-    chown system camera /dev/CAM_CAL_DRV
-    chown system camera /dev/MAINAF
-=======
     chmod 0660 /dev/camera-sysram
     chmod 0660 /dev/camera-isp
     chmod 0660 /dev/camera-fdvt
@@ -355,7 +327,6 @@ on post-fs-data
     chown system camera /dev/kd_camera_hw_bus2
     chown system camera /dev/FM50AF
     chown system camera /dev/CAM_CAL_DRV
->>>>>>> new/master
 
     # SMI
     chmod 0660 /dev/MTK_SMI
