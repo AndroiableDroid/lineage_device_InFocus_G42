@@ -8,7 +8,10 @@ import init.ssd.rc
 import init.no_ssd.rc
 import init.ssd_nomuser.rc
 import init.fon.rc
+<<<<<<< HEAD
 import init.aee.rc
+=======
+>>>>>>> new/master
 import init.trustonic.rc
 
 on early-init
@@ -192,7 +195,11 @@ on post-fs-data
 
     # create basic filesystem structure
     #mkdir /data/nvram 2770 root system
+<<<<<<< HEAD
 	# We chown/chmod /nvdata again so because mount is run as root + defaults
+=======
+    # We chown/chmod /nvdata again so because mount is run as root + defaults
+>>>>>>> new/master
     chown root system /nvdata
     chmod 2770 /nvdata
     symlink /nvdata /data/nvram
@@ -261,8 +268,11 @@ on post-fs-data
     # Turn off wifi by default
     write /sys/class/rfkill/rfkill1/state 0
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> new/master
     #otp
     chmod 0660 /dev/otp
     chown root system /dev/otp
@@ -278,8 +288,11 @@ on post-fs-data
     chmod 0777 /dev/mt6516_jpeg
     chmod 0777 /dev/FM50AF
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> new/master
     # RTC
     mkdir /data/misc/rtc 0770 system system
 
@@ -437,8 +450,13 @@ service debuggerd64 /system/bin/debuggerd64
 service mobile_log_d /system/bin/mobile_log_d
     class main
 
+<<<<<<< HEAD
 on property:ro.boot.mblogenable=0    
     stop mobile_log_d    
+=======
+on property:ro.boot.mblogenable=0
+    stop mobile_log_d
+>>>>>>> new/master
 
 on property:ro.boot.mblogenable=1
     start mobile_log_d

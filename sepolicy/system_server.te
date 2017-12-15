@@ -266,11 +266,14 @@ allow system_server teei_client_device:chr_file r_file_perms;
 # Package: com.mediatek.multiwindow.service
 allow system_server mtk_mwblacklist_service:service_manager find;
 
+<<<<<<< HEAD
 # ET310 etsd
 binder_call(system_server,etsd)
 allow system_server etsd_service:service_manager find;
 allow fingerprintd etsd_service:service_manager find;
 
+=======
+>>>>>>> new/master
 # Nougat
 allow system_server debugfs:dir { read open };
 allow system_server unlabeled:file unlink;

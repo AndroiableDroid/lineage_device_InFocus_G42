@@ -1,7 +1,10 @@
 # Configurations
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/audio_device.xml:system/etc/audio_device.xml \
+<<<<<<< HEAD
     $(LOCAL_PATH)/configs/audio/audio_policy_configuration.xml:system/etc/audio_policy_configuration.xml \
+=======
+>>>>>>> new/master
     $(LOCAL_PATH)/configs/audio/a2dp_audio_policy_configuration.xml:/system/etc/a2dp_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/audio_policy_volumes.xml:/system/etc/audio_policy_volumes.xml \
     frameworks/av/services/audiopolicy/config/default_volume_tables.xml:/system/etc/default_volume_tables.xml \

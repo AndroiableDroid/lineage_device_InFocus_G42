@@ -13,6 +13,9 @@ allow domain exm0_device:chr_file { read write ioctl open };
 allow domain log_device:dir search;
 allow domain log_device:chr_file {open write};
 allow domain storage_file:dir search;
+<<<<<<< HEAD
 
 # Fingerprint device
 allow domain esfp0_device:chr_file rw_file_perms;
+=======
+>>>>>>> new/master

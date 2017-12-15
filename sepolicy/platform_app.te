@@ -280,6 +280,7 @@ allow platform_app md_monitor:unix_stream_socket connectto;
 # Purpose : subtitle feature need to w/r /mnt/subt/.
 allow platform_app subtitle_data_file:dir { open read write search create add_name};
 allow platform_app subtitle_data_file:file { open read write create};
+<<<<<<< HEAD
 
 # Date : 2015/12/9
 # Operation : Migration
@@ -290,3 +291,5 @@ allow platform_app esfp0_device:chr_file rw_file_perms;;
 allow platform_app esfp0_device:chr_file rw_file_perms;;
 allow platform_app etsd_service:service_manager find;
 allow platform_app etsd:binder { call transfer };
+=======
+>>>>>>> new/master

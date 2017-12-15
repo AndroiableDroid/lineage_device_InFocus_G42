@@ -11,3 +11,9 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
+<<<<<<< HEAD
+=======
+
+#Linker
+#LINKER_FORCED_SHIM_LIBS := /system/lib/liblog.so|libmtkshim_log.so:/system/lib64/liblog.so|libmtkshim_log.so:/system/lib/hw/audio.primary.mt6753.so|libmtkshim_audio.so
+>>>>>>> new/master

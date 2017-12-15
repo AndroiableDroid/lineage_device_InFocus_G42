@@ -8,7 +8,10 @@ LOCAL_SRC_FILES := \
     mtk_audioCompat.c \
     mtk_cam.cpp \
     mtk_fence.cpp \
+<<<<<<< HEAD
 	mtk_gps.cpp \
+=======
+>>>>>>> new/master
     mtk_omx.cpp \
     mtk_ui.cpp \
     mtk_xlog.cpp

@@ -5,6 +5,7 @@ BOARD_SEPOLICY_DIRS := \
 # Seccomp Filter
 BOARD_SECCOMP_POLICY := \
 $(LOCAL_PATH)/seccomp
+<<<<<<< HEAD
 
 L_SEPOLICY := device/InFocus/G42/pres
 # SELinux
@@ -13,3 +14,5 @@ PRODUCT_COPY_FILES += \
 	$(L_SEPOLICY)/service_contexts:root/service_contexts \
 	$(L_SEPOLICY)/property_contexts:root/property_contexts \
 	$(L_SEPOLICY)/sepolicy:root/sepolicy 
+=======
+>>>>>>> new/master

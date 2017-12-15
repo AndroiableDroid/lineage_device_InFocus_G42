@@ -19,5 +19,9 @@
 
 <resources>
     <!-- When true enable gesture setting. -->
+<<<<<<< HEAD
     <bool name="config_gesture_settings_enabled">false</bool>
+=======
+    <bool name="config_gesture_settings_enabled">true</bool>
+>>>>>>> new/master
 </resources>

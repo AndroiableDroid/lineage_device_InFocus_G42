@@ -3,6 +3,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
     frameworks/native/data/etc/android.hardware.wifi.direct.xml:system/etc/permissions/android.hardware.wifi.direct.xml
 
+<<<<<<< HEAD
 # WiFi
 PRODUCT_PACKAGES += \
     dhcpcd.conf \
@@ -12,6 +13,14 @@ PRODUCT_PACKAGES += \
     wpa_supplicant.conf \
 	PRODUCT_PACKAGES += \
     lib_driver_cmd_mt66xx
+=======
+PRODUCT_PACKAGES += \
+    lib_driver_cmd_mt66xx \
+    libwifi-hal-mt66xx \
+    libwpa_client \
+    hostapd \
+    wpa_supplicant
+>>>>>>> new/master
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \

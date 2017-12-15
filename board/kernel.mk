@@ -12,7 +12,14 @@ TARGET_IS_64_BIT := true
 MTK_K64_SUPPORT := yes
 
 # Kernel properties
+<<<<<<< HEAD
 TARGET_PREBUILT_KERNEL := device/InFocus/G42/Image.gz-dtb
 
 PRODUCT_COPY_FILES += \
 	device/InFocus/G42/Image.gz-dtb:kernel
+=======
+TARGET_PREBUILT_KERNEL := device/InFocus/G42/rootdir/kernel
+
+PRODUCT_COPY_FILES += \
+	device/InFocus/G42/rootdir/kernel:kernel
+>>>>>>> new/master
